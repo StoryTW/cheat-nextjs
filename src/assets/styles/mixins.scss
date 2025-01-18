@@ -1,0 +1,224 @@
+// Media Queries Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint==laptopXL {
+    @media only screen and (max-width: 2560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopXG {
+    @media only screen and (max-width: 1560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopG {
+    @media only screen and (max-width: 1540px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopL {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopB {
+    @media only screen and (max-width: 1250px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopC {
+    @media only screen and (max-width: 1150px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletL {
+    @media only screen and (max-width: 912px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletS {
+    @media only screen and (max-width: 834px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletS {
+    @media only screen and (max-width: 744px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletContainer {
+    @media only screen and (max-width: 704px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletSM {
+    @media only screen and (max-width: 602px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileL {
+    @media only screen and (max-width: 475px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileSM {
+    @media only screen and (max-width: 414px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile360 {
+    @media only screen and (max-width: 360px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileS {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+// Smooth Transition
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@mixin noScrollBar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//Typography
+@mixin OpenSans_36_400 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_15_400 {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_16_400 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_18_400 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+@mixin OpenSans_12_400 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+@mixin OpenSans_14_400 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_20_400 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_21_400 {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_22_400 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_18_600 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+}
+
+@mixin OpenSans_22_600 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+}
+
+@mixin OpenSans_24_600 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+}
+
+@mixin OpenSans_24_400 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+@mixin OpenSans_30_400 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
