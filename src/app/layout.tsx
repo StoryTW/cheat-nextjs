@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
 import '@/assets/styles/index.scss';
 import { Header } from '@/layout/Header';
 import { Footer } from '@/layout/Footer';

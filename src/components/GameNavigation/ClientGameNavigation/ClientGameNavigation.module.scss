@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 92px;
+  margin-top: 52px;
+
+  .link {
+    @include Montserrat_24_500;
+    color: var(--gray);
+    text-transform: uppercase;
+    border: 2.5px solid transparent;
+    @include transition;
+    padding: 16px 24px;
+    border-radius: 10px;
+
+    &.active {
+      color: var(--white);
+      border: 2.5px solid #02539a;
+      background: #023c9a26;
+    }
+  }
+}

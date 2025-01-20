@@ -1,0 +1,20 @@
+.root {
+  margin-bottom: 116px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(512px, 512px) minmax(100px, 650px);
+  gap: 96px;
+}
+
+.title {
+  @include Montserrat_64_700;
+  color: #3f8efd;
+  margin-bottom: 46px;
+}
+
+.description {
+  @include Montserrat_22_400;
+  color: var(--gray);
+}
