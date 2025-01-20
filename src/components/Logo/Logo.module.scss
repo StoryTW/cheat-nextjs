@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  @include respond(tabletL) {
+    width: 64px;
+    height: 64px;
+  }
+
+  @include respond(mobileL) {
+    width: 64px;
+    height: 64px;
+  }
+}

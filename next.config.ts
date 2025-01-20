@@ -44,6 +44,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   sassOptions: {
+    silenceDeprecations: ['legacy-js-api'],
     additionalData: `
     @import "src/assets/styles/mixins.scss";
   `,
