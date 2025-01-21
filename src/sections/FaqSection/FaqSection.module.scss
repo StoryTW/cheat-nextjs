@@ -1,9 +1,27 @@
 .root {
   margin-bottom: 192px;
 
+  @include respond(tablet) {
+    margin-bottom: 80px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
+
   h2 {
     @include Montserrat_48_700;
     color: var(--gray);
     margin-bottom: 64px;
+
+    @include respond(tablet) {
+      font-size: 32px;
+      margin-bottom: 36px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
   }
 }

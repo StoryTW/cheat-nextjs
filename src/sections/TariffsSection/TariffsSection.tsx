@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { useSwiperRef } from '@/utils/useSwiperRef';
 import { Card } from './Card/Card';
+import { useMediaQuery } from 'react-responsive';
 
 interface ITariffsSection {
   data: any;
@@ -15,14 +16,17 @@ export const TariffsSection = ({ data }: ITariffsSection) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { swiperRef, handlePrev, handleNext } = useSwiperRef();
 
+  const isTabletL = useMediaQuery({ query: '(max-width: 912px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
   return (
     <section className={styles.root}>
       <>
         <Swiper
           loop
-          slidesPerView={3}
+          slidesPerView={isMobile ? 1 : isTabletL ? 2 : 3}
           spaceBetween={38}
-          centeredSlides
+          centeredSlides={!isTabletL}
           simulateTouch={false}
           onActiveIndexChange={(swiper) => setActiveIndex(swiper.realIndex)}
           modules={[Navigation]}

@@ -46,7 +46,7 @@ export default async function GamePage({ params }: IGamePage) {
   return (
     <>
       <GameNavigation />
-      <MainPage gameData={gameData} />;
+      <MainPage gameData={gameData} />
     </>
   );
 }

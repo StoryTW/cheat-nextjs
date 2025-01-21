@@ -28,7 +28,7 @@ export const SwiperInfo: FC<{ data: any }> = ({ data }) => {
           return (
             <SwiperSlide key={index}>
               <div className={styles.item}>
-                <Image src={item.src} alt={item.alt} width={512} height={585} />
+                <Image src={item.src} alt={item.alt} fill />
               </div>
             </SwiperSlide>
           );

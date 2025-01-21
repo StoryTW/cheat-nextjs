@@ -4,14 +4,31 @@
   border: 3px solid var(--gray);
   border-radius: 16px;
 
+  @include respond(tablet) {
+    padding: 24px 32px;
+  }
+
+  @include respond(mobileL) {
+    padding: 28px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 48px;
+
+    @include respond(tablet) {
+      margin-bottom: 32px;
+    }
+
+    @include respond(mobileL) {
+      margin-bottom: 16px;
+    }
   }
 
   .questionLabel {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
     @include transition;
 
     .label_question {
@@ -19,8 +36,12 @@
       @include Montserrat_32_700;
       color: var(--gray);
 
+      @include respond(tablet) {
+        font-size: 20px;
+      }
+
       @include respond(mobileL) {
-        // @include Bold_16;
+        font-size: 18px;
       }
     }
 
@@ -42,11 +63,14 @@
     color: var(--gray);
     padding-top: 12px;
     padding-right: 50px;
-    // @include Regular_18;
     @include Montserrat_32_700;
 
+    @include respond(tablet) {
+      font-size: 20px;
+    }
+
     @include respond(mobileL) {
-      // @include Regular_14;
+      font-size: 18px;
     }
   }
 }

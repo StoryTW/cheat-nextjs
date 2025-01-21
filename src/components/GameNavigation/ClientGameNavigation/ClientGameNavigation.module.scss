@@ -6,6 +6,17 @@
   margin-bottom: 92px;
   margin-top: 52px;
 
+  @include respond(tablet) {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    gap: 48px;
+  }
+
+  @include respond(mobileL) {
+    margin-top: 0px;
+    gap: 16px;
+  }
+
   .link {
     @include Montserrat_24_500;
     color: var(--gray);
@@ -14,6 +25,16 @@
     @include transition;
     padding: 16px 24px;
     border-radius: 10px;
+
+    @include respond(tablet) {
+      font-size: 20px;
+      padding: 8px 16px;
+    }
+
+    @include respond(mobileL) {
+      padding: 8px;
+      font-size: 16px;
+    }
 
     &.active {
       color: var(--white);

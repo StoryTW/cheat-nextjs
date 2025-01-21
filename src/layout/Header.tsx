@@ -3,6 +3,7 @@ import styles from './Header.module.scss'
 import { Logo } from '@/components/Logo/Logo'
 import { Navbar } from '@/components/Navbar/Navbar'
 import { ProfileButton } from '@/components/ProfileButton/ProfileButton'
+import { Burger } from '@/components/Burger/Burger'
 
 export const Header = () => {
   return (
@@ -11,6 +12,7 @@ export const Header = () => {
         <Logo />
         <Navbar />
         <ProfileButton />
+        <Burger />
       </div>
     </header>
   )

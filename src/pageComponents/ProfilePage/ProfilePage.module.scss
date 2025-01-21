@@ -1,3 +1,15 @@
+.root {
+  margin-bottom: 192px;
+
+  @include respond(tablet) {
+    margin-bottom: 80px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -8,6 +20,21 @@
     'list info'
     'list info';
   gap: 12px 24px;
+
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      'profile'
+      'list'
+      'info';
+    gap: 32px;
+  }
+
+  @include respond(mobileL) {
+    padding: 24px 0px;
+  }
 }
 
 .profile {

@@ -5,8 +5,8 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import '@/assets/styles/index.scss';
 import { Header } from '@/layout/Header';
-import { Footer } from '@/layout/Footer';
 import { Providers } from '@/providers/Providers';
+import { Footer } from '@/layout/Footer';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],

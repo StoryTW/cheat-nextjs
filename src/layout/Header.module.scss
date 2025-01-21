@@ -5,4 +5,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+
+  @include respond(tablet) {
+    padding: 32px 0px;
+  }
+
+  @include respond(mobileL) {
+    padding: 24px 0px;
+  }
 }

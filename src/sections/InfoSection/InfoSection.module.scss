@@ -1,20 +1,52 @@
 .root {
   margin-bottom: 116px;
+
+  @include respond(tablet) {
+    margin-bottom: 80px;
+  }
+
+  @include respond(mobileL) {
+    margin-bottom: 48px;
+  }
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(512px, 512px) minmax(100px, 650px);
+  grid-template-columns: minmax(200px, 512px) minmax(100px, 650px);
   gap: 96px;
+
+  @include respond(tabletL) {
+    grid-template-columns: minmax(260px, 1fr);
+    align-items: center;
+    gap: 48px;
+  }
 }
 
 .title {
   @include Montserrat_64_700;
   color: #3f8efd;
   margin-bottom: 46px;
+
+  @include respond(tabletL) {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .description {
   @include Montserrat_22_400;
   color: var(--gray);
+
+  @include respond(tablet) {
+    font-size: 20px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 18px;
+  }
 }

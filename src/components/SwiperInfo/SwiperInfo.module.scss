@@ -2,4 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 585px;
+
+  @include respond(tabletL) {
+    height: 480px;
+  }
+
+  @include respond(mobileL) {
+    height: 380px;
+  }
 }
