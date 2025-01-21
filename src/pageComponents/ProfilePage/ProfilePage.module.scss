@@ -1,8 +1,11 @@
 .wrapper {
   display: grid;
   grid-template-columns: max-content 1fr;
+  grid-template-rows: repeat(4, 208px);
   grid-template-areas:
     'profile info'
+    'list info'
+    'list info'
     'list info';
   gap: 12px 24px;
 }
@@ -18,6 +21,10 @@
 
 .info {
   grid-area: info;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .box {
@@ -92,5 +99,104 @@
     &:hover {
       opacity: 0.7;
     }
+
+    &:active {
+      border: 2.5px solid #02539a;
+      background: linear-gradient(
+        202.7deg,
+        rgba(2, 83, 154, 0.5) 16.83%,
+        rgba(1, 34, 52, 0.25) 69.42%
+      );
+    }
+  }
+}
+
+.infoTitle {
+  @include Montserrat_32_700;
+  font-weight: 500;
+  padding-bottom: 16px;
+  border-bottom: 2.5px solid #02539a;
+  margin-bottom: 16px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 38px;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .date {
+      @include Montserrat_48_700;
+      color: var(--gray);
+    }
+
+    .text {
+      @include Montserrat_18_400;
+      font-weight: 500;
+      color: var(--gray);
+    }
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.infoDescription {
+  @include Montserrat_24_500;
+  color: var(--gray);
+}
+
+.infoPrice {
+  @include Montserrat_32_700;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.listTitle {
+  padding: 40px 40px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  @include Montserrat_32_700;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.listBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btnPromo {
+  border: 2.5px solid #02539a;
+  background: linear-gradient(202.7deg, rgba(2, 83, 154, 0.5) 16.83%, rgba(1, 34, 52, 0.25) 69.42%);
+  color: var(--gray);
+  text-transform: uppercase;
+  padding: 12px 38px;
+  border-radius: 10px;
+  cursor: pointer;
+  @include Montserrat_24_700;
+  font-size: 14px;
+  @include transition;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    border: 2.5px solid #02539a;
+    background: linear-gradient(
+      202.7deg,
+      rgba(2, 83, 154, 0.5) 16.83%,
+      rgba(1, 34, 52, 0.25) 69.42%
+    );
   }
 }
