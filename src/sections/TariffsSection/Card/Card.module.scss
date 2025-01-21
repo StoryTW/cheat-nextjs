@@ -116,3 +116,55 @@
     font-size: 12px;
   }
 }
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  .dropdownText {
+    @include Montserrat_16_400;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .arrow {
+    svg {
+      transform: rotate(-180deg);
+      @include transition;
+    }
+
+    &.open {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.ddList {
+  margin: 16px 0px;
+  background: #11385b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.option {
+  background: #11385b;
+  @include transition;
+  padding: 6px 16px;
+  cursor: pointer;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.selected {
+    background: #3f8efd;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
