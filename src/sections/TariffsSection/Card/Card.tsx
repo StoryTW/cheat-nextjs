@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import IconCard from '@/assets/icons/pay_methods/card.svg?react';
+import { Slider } from '@/components/Slider/Slider';
 
 interface ICard {
   data: any;
@@ -59,6 +60,16 @@ export const Card = ({ data, active }: ICard) => {
         </div>
 
         <div className={styles.foot}>
+          {active && (
+            <div className={styles.sliderWrapper}>
+              <div className={styles.label}>Выберите время подписки</div>
+
+              <Slider />
+
+              <div className={styles.sliderDescription}>При оплате 7 дней вы сэкономите 700р *</div>
+            </div>
+          )}
+
           <div
             className={clsx(styles.payMethodsText, {
               [styles.active]: active,

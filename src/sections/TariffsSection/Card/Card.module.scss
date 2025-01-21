@@ -50,9 +50,6 @@
   gap: 4px;
 }
 
-.foot {
-}
-
 .payMethodsText {
   @include Montserrat_18_400;
   margin-bottom: 20px;
@@ -105,5 +102,17 @@
   &.active {
     color: #02539a;
     font-size: 32px;
+  }
+}
+
+.sliderWrapper {
+  .label {
+    @include Montserrat_16_400;
+    margin-bottom: 6px;
+  }
+
+  .sliderDescription {
+    @include Montserrat_16_400;
+    font-size: 12px;
   }
 }
