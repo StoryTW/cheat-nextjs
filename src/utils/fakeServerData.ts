@@ -114,3 +114,35 @@ export const fakeGameList = [
     name: 'DOTA 2',
   },
 ];
+
+export const fakeProfileData = {
+  account: {
+    name: 'Name',
+    id: '23213123',
+    email: 'example@mail.ru'
+  },
+  subscription: [
+    {
+      id: '1',
+      name: 'CS',
+      status: 'Отсутствует',
+      price: '1500',
+      expired: {
+        d: '27',
+        h: '12',
+        m: '43',
+      },
+    },
+    {
+      id: '2',
+      name: 'Valorant',
+      status: 'Приобретена',
+      price: '7500',
+      expired: {
+        d: '27',
+        h: '15',
+        m: '21',
+      },
+    },
+  ],
+};
