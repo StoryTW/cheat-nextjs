@@ -27,7 +27,7 @@ export const TariffsSection = ({ data }: ITariffsSection) => {
           slidesPerView={isMobile ? 1 : isTabletL ? 2 : 3}
           spaceBetween={38}
           centeredSlides={!isTabletL}
-          simulateTouch={false}
+          simulateTouch={isTabletL || isMobile ? true : false}
           onActiveIndexChange={(swiper) => setActiveIndex(swiper.realIndex)}
           modules={[Navigation]}
           onBeforeInit={(swiper) => {
