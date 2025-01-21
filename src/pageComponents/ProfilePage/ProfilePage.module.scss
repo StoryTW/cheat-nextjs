@@ -55,6 +55,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include respond(tablet) {
+    padding: 24px;
+  }
 }
 
 .box {
@@ -78,6 +82,13 @@
     height: 162px;
     border-radius: 10px;
     background: linear-gradient(135deg, #665dcd 0%, #5fa4e6 44.76%, #d2ab67 100%);
+
+    @include respond(mobileL) {
+      min-width: 120px;
+      min-height: 120px;
+      width: 120px;
+      height: 120px;
+    }
   }
 
   .profileName {
@@ -85,6 +96,14 @@
     font-size: 26px;
     color: var(--white);
     margin-bottom: 12px;
+
+    @include respond(tablet) {
+      font-size: 22px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 18px;
+    }
   }
 
   .profileId {
@@ -92,6 +111,14 @@
     font-size: 20px;
     color: var(--gray);
     margin-bottom: 12px;
+
+    @include respond(tablet) {
+      font-size: 18px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 16px;
+    }
 
     span {
       color: var(--white);
@@ -103,6 +130,14 @@
     font-size: 20px;
     color: var(--gray);
     margin-bottom: 20px;
+
+    @include respond(tablet) {
+      font-size: 18px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 16px;
+    }
 
     span {
       color: var(--white);
@@ -126,6 +161,10 @@
     font-size: 14px;
     @include transition;
 
+    @include respond(mobileL) {
+      font-size: 12px;
+    }
+
     &:hover {
       opacity: 0.7;
     }
@@ -147,6 +186,14 @@
   padding-bottom: 16px;
   border-bottom: 2.5px solid #02539a;
   margin-bottom: 16px;
+
+  @include respond(tablet) {
+    font-size: 28px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 20px;
+  }
 }
 
 .time {
@@ -156,6 +203,10 @@
   gap: 22px;
   margin-bottom: 38px;
 
+  @include respond(mobileL) {
+    gap: 12px;
+  }
+
   .block {
     display: flex;
     flex-direction: column;
@@ -164,6 +215,14 @@
     .date {
       @include Montserrat_48_700;
       color: var(--gray);
+
+      @include respond(tablet) {
+        font-size: 28px;
+      }
+    
+      @include respond(mobileL) {
+        font-size: 20px;
+      }
     }
 
     .text {
@@ -189,6 +248,14 @@
   @include Montserrat_32_700;
   font-weight: 600;
   color: var(--gray);
+
+  @include respond(tablet) {
+    font-size: 28px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 20px;
+  }
 }
 
 .listTitle {
@@ -198,6 +265,15 @@
   @include Montserrat_32_700;
   font-weight: 500;
   color: var(--white);
+
+  @include respond(tablet) {
+    font-size: 28px;
+    padding: 24px;
+  }
+
+  @include respond(mobileL) {
+    font-size: 24px;
+  }
 }
 
 .listBtn {
@@ -217,6 +293,10 @@
   font-size: 14px;
   @include transition;
   margin-bottom: 24px;
+
+  @include respond(mobileL) {
+    font-size: 12px;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -243,6 +323,10 @@
   @include transition;
   cursor: pointer;
   margin-bottom: 16px;
+
+  @include respond(tablet) {
+    padding: 6px 24px;
+  }
 
   &.active {
     border: 2.5px solid #02539a;
@@ -273,10 +357,26 @@
     font-weight: 600;
     color: var(--white);
     text-transform: uppercase;
+
+    @include respond(tablet) {
+      font-size: 20px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 18px;
+    }
   }
 
   .listItemStatus {
     @include Montserrat_24_700;
     font-size: var(--white);
+
+    @include respond(tablet) {
+      font-size: 20px;
+    }
+
+    @include respond(mobileL) {
+      font-size: 18px;
+    }
   }
 }
