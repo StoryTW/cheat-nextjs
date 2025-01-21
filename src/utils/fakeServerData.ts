@@ -125,6 +125,7 @@ export const fakeProfileData = {
     {
       id: '1',
       name: 'CS',
+      icon: '/img/cs-icon.svg',
       status: 'Отсутствует',
       price: '1500',
       expired: {
@@ -136,6 +137,7 @@ export const fakeProfileData = {
     {
       id: '2',
       name: 'Valorant',
+      icon: '/img/valorant-icon.svg',
       status: 'Приобретена',
       price: '7500',
       expired: {

@@ -6,6 +6,7 @@ import { useModalStore } from '@/store/useModalStore';
 import { EditModal } from '@/components/ModalContent/EditModal/EditModal';
 import IconSeparator from '@/assets/icons/separator.svg?react';
 import { PromocodeModal } from '@/components/ModalContent/PromocodeModal/PromocodeModal';
+import Image from 'next/image';
 
 interface IProfilePage {
   data: any;
@@ -97,13 +98,19 @@ export const ProfilePage: FC<IProfilePage> = ({ data }) => {
             <ul className={styles.listContent}>
               {data.subscription.map((item, index) => {
                 return (
-                  <li
-                    key={index}
-                    className={styles.listItem}
-                    onClick={() => handleChangeSubscription(item.id)}
-                  >
-                    <button type='button' tabIndex={-1}>
-                      {item.id}
+                  <li key={index} onClick={() => handleChangeSubscription(item.id)}>
+                    <button
+                      type='button'
+                      tabIndex={-1}
+                      className={clsx(styles.listItem, {
+                        [styles.active]: item.id === currentSubscription,
+                      })}
+                    >
+                      <Image src={item.icon} width={68} height={68} alt={item.name} />
+                      <div className={styles.listItemContent}>
+                        <div className={styles.listItemName}>{item.name}</div>
+                        <div className={styles.listItemStatus}>{item.status}</div>
+                      </div>
                     </button>
                   </li>
                 );
