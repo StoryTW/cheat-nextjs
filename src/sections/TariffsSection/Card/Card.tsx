@@ -3,6 +3,10 @@ import React from 'react';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import IconCard from '@/assets/icons/pay_methods/card.svg?react';
+import IconSbp from '@/assets/icons/pay_methods/sbp.svg?react';
+import IconYoomoney from '@/assets/icons/pay_methods/yoomoney.svg?react';
+import IconEth from '@/assets/icons/pay_methods/eth.svg?react';
+import IconTon from '@/assets/icons/pay_methods/ton.svg?react';
 import { Slider } from '@/components/Slider/Slider';
 
 interface ICard {
@@ -12,28 +16,19 @@ interface ICard {
 
 const PAY_ARRAY = [
   {
-    el: <IconCard />,
+    el: <IconSbp />,
   },
   {
     el: <IconCard />,
   },
   {
-    el: <IconCard />,
+    el: <IconYoomoney />,
   },
   {
-    el: <IconCard />,
+    el: <IconTon />,
   },
   {
-    el: <IconCard />,
-  },
-  {
-    el: <IconCard />,
-  },
-  {
-    el: <IconCard />,
-  },
-  {
-    el: <IconCard />,
+    el: <IconEth />,
   },
 ];
 
