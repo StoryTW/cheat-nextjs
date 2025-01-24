@@ -1,0 +1,38 @@
+.root {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 6px;
+  display: none;
+
+  @include respond (tabletL) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.btn {
+  padding: 6px;
+  background: #11385b;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  width: 100%;
+  white-space: nowrap;
+
+  &.active {
+    background: #3f8efd;
+    border: none;
+  }
+
+  &:focus {
+    background: #3f8efd;
+    border: none;
+  }
+
+  &:active {
+    background: #3f8efd;
+    border: none;
+  }
+}

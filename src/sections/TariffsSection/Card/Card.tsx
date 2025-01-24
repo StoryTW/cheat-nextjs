@@ -11,6 +11,7 @@ import { Slider } from '@/components/Slider/Slider';
 import IconArrow from '@/assets/icons/icon-arrow-s.svg?react';
 import IconCheckbox from '@/assets/icons/checkbox.svg?react';
 import { AnimatePresence } from 'motion/react';
+import { ToggleGroup } from '@/components/ToggleGroup/ToggleGroup';
 
 interface ICard {
   data: any;
@@ -128,6 +129,7 @@ export const Card = ({ data, active }: ICard) => {
               <div className={styles.label}>Выберите время подписки</div>
 
               <Slider />
+              <ToggleGroup />
 
               <div className={styles.sliderDescription}>При оплате 7 дней вы сэкономите 700р *</div>
             </div>
