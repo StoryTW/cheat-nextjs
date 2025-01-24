@@ -11,11 +11,11 @@
 
   h2 {
     @include Montserrat_48_700;
+    font-size: 32px;
     color: var(--gray);
     margin-bottom: 64px;
 
     @include respond(tablet) {
-      font-size: 32px;
       margin-bottom: 36px;
     }
 

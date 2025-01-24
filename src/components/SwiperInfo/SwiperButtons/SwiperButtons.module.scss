@@ -23,16 +23,18 @@
   }
 
   &.prev {
+    transform: rotate(-30deg);
+
     &:active {
-      transform: scale(0.9);
+      transform: rotate(-30deg) scale(0.9);
     }
   }
 
   &.next {
-    transform: rotate(120deg);
+    transform: rotate(150deg);
 
     &:active {
-      transform: rotate(120deg) scale(0.9);
+      transform: rotate(150deg) scale(0.9);
     }
   }
 }
