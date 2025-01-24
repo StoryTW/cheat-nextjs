@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   @include Montserrat_16_400;
   color: var(--white);
   text-transform: uppercase;
@@ -10,18 +10,4 @@
   @include respond(mobileL) {
     display: none;
   }
-}
-
-.icon {
-  background: linear-gradient(135deg, #665dcd 0%, #5fa4e6 44.76%, #d2ab67 100%);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border-radius: 50%;
-  min-width: 18px;
-  min-height: 18px;
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  max-width: 18px;
-  max-height: 18px;
 }
