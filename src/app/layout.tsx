@@ -7,6 +7,7 @@ import '@/assets/styles/index.scss';
 import { Header } from '@/layout/Header';
 import { Providers } from '@/providers/Providers';
 import { Footer } from '@/layout/Footer';
+import clsx from 'clsx';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -26,14 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ru'>
-      <body className={montserrat.className}>
+      <body className={clsx(montserrat.className, 'splat-toggle')}>
         <Providers>
-          <div className='background'>
-            <div className='container'>
-              <Header />
-              {children}
-              <Footer />
-            </div>
+          <div className='container'>
+            <Header />
+            {children}
+            <Footer />
           </div>
         </Providers>
       </body>
